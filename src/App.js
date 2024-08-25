@@ -25,7 +25,7 @@ const App = () => {
                 throw new Error('Invalid JSON structure: "data" should be an array.');
             }
 
-            const res = await axios.post('http://localhost:8000/bfhl', parsedData);
+            const res = await axios.post('https://bajaj-backend-zeta.vercel.app/bfhl', parsedData);
             setResponse(res.data);
         } catch (error) {
             console.error('Error submitting JSON:', error);
